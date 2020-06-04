@@ -1,0 +1,59 @@
+.container1
+{
+    background-image: url("../assets/night.jpg") ;
+    background-size: cover;
+background-repeat: no-repeat;
+position: fixed;
+background-attachment: scroll;
+background-position: 50% 50%;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+content: "";
+z-index: 0;
+}
+
+.app-parent{
+    float:top;
+}
+
+button{
+    margin-right: 30px;
+    padding: 5px 15px 5px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: black;
+    font-size: 130%;
+}
+button:hover{
+    background-color: rgb(214, 214, 214);
+}
+button:active{
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: black;
+}
+col-md-5 col-md-7
+{
+    height: 100%;
+    width : 100%;
+    padding :0;
+    margin : 0;
+    border:0;
+}
+
+.frame
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+app-parent
+{
+    float: top;
+}

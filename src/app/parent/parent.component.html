@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-2">
+    </div>
+    <div class="col-xs-5">
+        <div *ngIf="day>0">
+            <app-planner [day_task]="data.getaplan(day)" [day_value]="day" ></app-planner>
+        </div>
+      
+    </div>
+    <div class="col-xs-5">
+
+        <div class="outer-container" >
+            <div class="days-container">
+                <div *ngFor="let plan of plans;let i = index" >
+                        <button  *ngIf="day!=i+1" class="button2" (click)="set_day(i+1)" >Day {{i+1}}</button>
+                        <button  *ngIf="day==i+1" class="button3" (click)="set_day(i+1)" >Day {{i+1}}</button>
+                </div>
+            </div>
+            <div class="b-container" >
+                <button class="button1" (click)="add_day()" ><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+
+

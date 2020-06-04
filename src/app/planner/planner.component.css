@@ -1,0 +1,24 @@
+.plan-container
+{
+     width: 40vw;
+     min-height: 75vh;
+     margin-top:4%;
+     background-color:rgb(255, 255, 255,0.5); ;
+     left: 0;
+     padding : 35px 40px 15px
+}
+
+button1{
+     padding: 5px 20px 5px;
+}
+.task-container
+{
+     padding-left:10%;
+     padding-right: 10%;
+}
+.task{
+     background-color: white;
+     padding: 3px;
+     margin-bottom:5px;
+}
+

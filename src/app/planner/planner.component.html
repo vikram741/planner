@@ -1,0 +1,48 @@
+<div class="plan-container" >
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-8">
+            <form > 
+                <div class="form-group">
+                    <input  [(ngModel)] = "task" maxlength=35
+                    type="text" class="form-control" name="name" placeholder="Enter Task"  >
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3">
+            <button class="btn btn-warning button1" (click)="add_task()">add </button>
+        </div>
+    </div>
+    <hr style="margin-top: 0;" >
+    
+    <div class="task-container">
+        <div *ngFor="let task of day_task;let i=index">
+            <div class="row task" *ngIf="!task.status">
+                <div class="col-xs-9">
+                    {{task.title}}
+                </div>
+                <div class="col-xs-1">
+                    <button class="btn btn-danger" (click)="del(i)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-xs-2">
+                    <button class="btn btn-success" (click)="do_task(i)" > Done</button>
+                </div>
+            </div>
+        </div>
+        <div *ngFor="let task of day_task; let i = index">
+            <div class="row task" *ngIf="task.status">
+                <div class="col-xs-9">
+                    {{task.title}}
+                </div>
+                <div class="col-xs-1">
+                    <button class="btn btn-danger" (click)="del(i)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-xs-2">
+                    <button class="btn btn-primary" (click)="undo_task(i)" > Undo</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
